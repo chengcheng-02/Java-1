@@ -304,6 +304,7 @@ public class BinaryTree {
      *
      * @param localRoot The local root of the binary tree
      */
+
     public void bfs(Node localRoot) {
         // Create a queue for the order of the nodes
         Queue<Node> queue = new LinkedList<Node>();

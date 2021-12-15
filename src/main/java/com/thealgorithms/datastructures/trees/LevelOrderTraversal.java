@@ -1,5 +1,7 @@
 package com.thealgorithms.datastructures.trees;
-
+/*
+* 层次遍历非递归
+* */
 public class LevelOrderTraversal {
 
     class Node {

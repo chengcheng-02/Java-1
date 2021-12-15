@@ -9,7 +9,7 @@ class AdjacencyListGraph<E extends Comparable<E>> {
     public AdjacencyListGraph() {
         verticies = new ArrayList<>();
     }
-
+//    顶点类
     private class Vertex {
 
         E data;

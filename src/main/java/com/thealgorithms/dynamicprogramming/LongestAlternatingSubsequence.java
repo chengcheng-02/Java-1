@@ -3,7 +3,7 @@ package com.thealgorithms.dynamicprogramming;
 /*
 
  * Problem Statement: - 
- * Find Longest Alternating Subsequence
+ * Find Longest Alternating Subsequence 最长交替子序列
 
  * A sequence {x1, x2, .. xn} is alternating sequence if its elements satisfy one of the following relations : 
 
@@ -13,14 +13,14 @@ package com.thealgorithms.dynamicprogramming;
 public class LongestAlternatingSubsequence {
 
     /* Function to return longest alternating subsequence length*/
-    static int AlternatingLength(int arr[], int n) {
+    static int AlternatingLength(int[] arr, int n) {
         /*
-
+        最后一个元素i大于之前的元素
 		las[i][0] = Length of the longest
 			alternating subsequence ending at
 			index i and last element is
 			greater than its previous element
-
+        最后一个元素i小于大于的元素
 		las[i][1] = Length of the longest
 			alternating subsequence ending at
 			index i and last element is
@@ -28,8 +28,8 @@ public class LongestAlternatingSubsequence {
 			element 
 
          */
-        int las[][] = new int[n][2]; // las = LongestAlternatingSubsequence
-
+        int[][] las = new int[n][2]; // las = LongestAlternatingSubsequence
+//        初始化数组
         for (int i = 0; i < n; i++) {
             las[i][0] = las[i][1] = 1;
         }
@@ -63,7 +63,7 @@ public class LongestAlternatingSubsequence {
     }
 
     public static void main(String[] args) {
-        int arr[] = {10, 22, 9, 33, 49, 50, 31, 60};
+        int[] arr = {10, 22, 9, 33, 49, 50, 31, 60};
         int n = arr.length;
         System.out.println("Length of Longest " + "alternating subsequence is " + AlternatingLength(arr, n));
     }

@@ -7,7 +7,7 @@ import java.util.Queue;
 public class LevelOrderTraversalQueue {
 
     /* Class to represent Tree node */
-    class Node {
+    static class Node {
 
         int data;
         Node left, right;

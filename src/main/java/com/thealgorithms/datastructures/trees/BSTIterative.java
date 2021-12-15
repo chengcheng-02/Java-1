@@ -2,7 +2,7 @@ package com.thealgorithms.datastructures.trees;
 
 /**
  *
- *
+ * 采用非递归编写的二叉搜索树
  * <h1>Binary Search Tree (Iterative)</h1>
  *
  * <p>

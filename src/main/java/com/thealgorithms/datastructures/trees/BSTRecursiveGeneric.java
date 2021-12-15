@@ -137,7 +137,7 @@ public class BSTRecursiveGeneric<T extends Comparable<T>> {
 
     /**
      * Recursively print Preorder traversal of the BST
-     *
+     * 先序遍历
      * @param node the root node
      */
     private void preOrder(Node<T> node) {
@@ -155,7 +155,7 @@ public class BSTRecursiveGeneric<T extends Comparable<T>> {
 
     /**
      * Recursively print Postorder traversal of BST.
-     *
+     * 后序遍历
      * @param node the root node
      */
     private void postOrder(Node<T> node) {
@@ -173,7 +173,7 @@ public class BSTRecursiveGeneric<T extends Comparable<T>> {
 
     /**
      * Recursively print Inorder traversal of BST.
-     *
+     * 中序遍历
      * @param node the root node
      */
     private void inOrder(Node<T> node) {

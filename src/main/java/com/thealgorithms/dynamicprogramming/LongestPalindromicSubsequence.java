@@ -1,7 +1,7 @@
 package com.thealgorithms.dynamicprogramming;
 
 /**
- * Algorithm explanation
+ * Algorithm explanation 递归求最大回文子序列
  * https://www.educative.io/edpresso/longest-palindromic-subsequence-algorithm
  */
 public class LongestPalindromicSubsequence {
@@ -27,10 +27,9 @@ public class LongestPalindromicSubsequence {
         String bestResult = "";
 
         // no more chars, then return empty
-        if (original.length() == 0 || reverse.length() == 0) {
-            bestResult = "";
-        } else {
-
+        if (original.length() == 0 || reverse.length() == 0)
+            return "";
+        else {
             // if the last chars match, then remove it from both strings and recur
             if (original.charAt(original.length() - 1) == reverse.charAt(reverse.length() - 1)) {
                 String bestSubResult
@@ -55,7 +54,6 @@ public class LongestPalindromicSubsequence {
                 }
             }
         }
-
         return bestResult;
     }
 }

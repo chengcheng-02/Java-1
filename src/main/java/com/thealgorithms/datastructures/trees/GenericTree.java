@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * A generic tree is a tree which can have as many children as it can be It
  * might be possible that every node present is directly connected to root node.
- *
+ * 泛型树
  * <p>
  * In this code Every function has two copies: one function is helper function
  * which can be called from main and from that function a private function is
@@ -16,13 +16,28 @@ import java.util.Scanner;
  */
 public class GenericTree {
 
-    private class Node {
+    public static void main(String[] args) {
+        GenericTree a = new GenericTree();
+//        a.display();
+        System.out.println("泛型树有"+a.size2()+"个节点");
+        System.out.println("泛型树最大节点值为:"+a.max());
+
+        a.removeleaves();
+    }
+    private static class Node {
 
         int data;
         ArrayList<Node> child = new ArrayList<>();
-    }
+        public Node(){}
+        public Node(int data){
+            this.data = data;
+            child = null;
+        }
 
+    }
+//    根节点
     private Node root;
+
     private int size;
 
     public GenericTree() { // Constructor
@@ -30,12 +45,12 @@ public class GenericTree {
         root = create_treeG(null, 0, scn);
     }
 
-    private Node create_treeG(Node node, int childindx, Scanner scn) {
+    private Node create_treeG(Node node, int childIndex, Scanner scn) {
         // display
         if (node == null) {
             System.out.println("Enter root's data");
         } else {
-            System.out.println("Enter data of parent of index " + node.data + " " + childindx);
+            System.out.println("Enter data of parent of index " + node.data + " " + childIndex);
         }
         // input
         node = new Node();
@@ -74,11 +89,11 @@ public class GenericTree {
      *
      * @return size
      */
-    public int size2call() {
+    public int size2() {
         return size2(root);
     }
 
-    public int size2(Node roott) {
+    private int size2(Node roott) {
         int sz = 0;
         for (int i = 0; i < roott.child.size(); i++) {
             sz += size2(roott.child.get(i));
@@ -91,7 +106,7 @@ public class GenericTree {
      *
      * @return maximum value
      */
-    public int maxcall() {
+    public int max() {
         int maxi = root.data;
         return max(root, maxi);
     }
@@ -112,7 +127,7 @@ public class GenericTree {
      *
      * @return height
      */
-    public int heightcall() {
+    public int height() {
         return height(root) - 1;
     }
 
@@ -133,7 +148,7 @@ public class GenericTree {
      * @param info number
      * @return present or not
      */
-    public boolean findcall(int info) {
+    public boolean find(int info) {
         return find(root, info);
     }
 
@@ -220,14 +235,14 @@ public class GenericTree {
     /**
      * Function to remove all leaves of generic tree
      */
-    public void removeleavescall() {
+    public void removeleaves() {
         removeleaves(root);
     }
 
     private void removeleaves(Node node) {
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i = 0; i < node.child.size(); i++) {
-            if (node.child.get(i).child.size() == 0) {
+            if (node.child.get(i).child.size() == 0) { // 如果为叶子节点，加入arr
                 arr.add(i);
                 // node.child.remove(i);
                 // i--;

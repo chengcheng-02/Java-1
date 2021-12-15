@@ -7,13 +7,13 @@ public class CircleSort implements SortAlgorithm {
     /* This method implements the circle sort
     * @param array The array to be sorted 
      */
+
     @Override
     public <T extends Comparable<T>> T[] sort(T[] array) {
         int n = array.length;
         while (doSort(array, 0, n - 1));
         return array;
     }
-
     /* This method implements the cyclic sort recursive version
     * @param array The array to be sorted
     * @param the left boundary of the part currently being sorted

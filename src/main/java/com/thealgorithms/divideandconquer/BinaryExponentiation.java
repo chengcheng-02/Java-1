@@ -1,4 +1,4 @@
-package com.thealgorithms.divideandconquer;
+package com.thealgorithms.divideandconquer; //分治策略
 
 public class BinaryExponentiation {
 

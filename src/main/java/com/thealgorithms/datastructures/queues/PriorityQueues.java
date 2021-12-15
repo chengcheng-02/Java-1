@@ -124,6 +124,6 @@ public class PriorityQueues {
             System.out.print(
                     myQueue.remove() + " "); // will print the queue in reverse order [10, 5, 3, 2]
         }
-        // As you can see, a Priority Queue can be used as a sorting algotithm
+        // As you can see, a Priority Queue can be used as a sorting algorithm
     }
 }

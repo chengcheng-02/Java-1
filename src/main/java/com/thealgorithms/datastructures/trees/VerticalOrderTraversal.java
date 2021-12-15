@@ -7,7 +7,8 @@ import java.util.Map;
 import java.util.Queue;
 
 /* The following class implements a vertical order traversal
-in a tree from top to bottom and left to right, so for a tree :
+in a tree from top to bottom and left to right, so for a tree : 垂直顺序遍历
+把一条垂线从X=-infinity移动到X=+infinity，每当该垂线与节点接触时，我们按从上到下的顺序报告节点的值（Y坐标递减）
            1
           / \
          2   3
@@ -85,8 +86,8 @@ public class VerticalOrderTraversal {
 			 to the respective ArrayList present at that
 			 index. */
             map.get(index.peek()).add(queue.peek().data);
-            max = (int) Math.max(max, index.peek());
-            min = (int) Math.min(min, index.peek());
+            max = Math.max(max, index.peek());
+            min = Math.min(min, index.peek());
             /*The Node and its index are removed 
 			 from their respective queues.*/
             index.poll();
@@ -97,9 +98,7 @@ public class VerticalOrderTraversal {
 		vertical column that is added in ans ArrayList.*/
         ArrayList<Integer> ans = new ArrayList<>();
         for (int i = min; i <= max; i++) {
-            for (int j = 0; j < map.get(i).size(); j++) {
-                ans.add(map.get(i).get(j));
-            }
+            ans.addAll(map.get(i));
         }
         return ans;
     }

@@ -165,6 +165,10 @@ public class StrassenMatrixMultiplication {
 
         // Matrix C computations
         // Matrix C calling method to get Result
+        // 7 51 13 28
+        //18 54 42 27
+        //11 29 20 27
+        //8 52 6 16
         int[][] C = s.multiply(A, B);
 
         System.out.println("\nProduct of matrices A and  B : ");

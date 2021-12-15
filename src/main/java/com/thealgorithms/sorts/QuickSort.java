@@ -37,7 +37,7 @@ class QuickSort implements SortAlgorithm {
 
     /**
      * Ramdomize the array to avoid the basically ordered sequences
-     *
+     * ramdominize数组以避免基本有序的序列
      * @param array The array to be sorted
      * @param left The first index of an array
      * @param right The last index of an array

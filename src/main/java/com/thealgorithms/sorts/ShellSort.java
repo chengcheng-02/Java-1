@@ -6,7 +6,7 @@ public class ShellSort implements SortAlgorithm {
 
     /**
      * Implements generic shell sort.
-     *
+     * 希尔排序
      * @param array the array to be sorted.
      * @param <T> the type of elements in the array.
      * @return the sorted array.

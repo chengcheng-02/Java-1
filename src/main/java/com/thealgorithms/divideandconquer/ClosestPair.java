@@ -1,8 +1,12 @@
 package com.thealgorithms.divideandconquer;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * For a set of points in a coordinates system (10000 maximum), ClosestPair
  * class calculates the two closest points.
+ * 平面上最近点对，和最大子序列和思路一样，根据
  */
 public final class ClosestPair {
 
@@ -75,7 +79,7 @@ public final class ClosestPair {
     }
 
     /**
-     * xPartition function: arrange x-axis.
+     * xPartition function: arrange x-axis. 排列x轴
      *
      * @param a (IN Parameter) array of points <br>
      * @param first (IN Parameter) first point <br>
@@ -103,7 +107,7 @@ public final class ClosestPair {
     }
 
     /**
-     * yPartition function: arrange y-axis.
+     * yPartition function: arrange y-axis.  排列y轴
      *
      * @param a (IN Parameter) array of points <br>
      * @param first (IN Parameter) first point <br>
@@ -187,7 +191,7 @@ public final class ClosestPair {
 
         double minLeftArea; // Minimum length of left array
         double minRightArea; // Minimum length of right array
-        double minValue; // Minimum lengt
+        double minValue; // Minimum length
 
         minLeftArea = closestPair(leftArray, divideX); // recursive closestPair
         minRightArea = closestPair(rightArray, indexNum - divideX);
@@ -312,7 +316,6 @@ public final class ClosestPair {
      * @param args (IN Parameter) <br>
      */
     public static void main(final String[] args) {
-
         // Input data consists of one x-coordinate and one y-coordinate
         ClosestPair cp = new ClosestPair(12);
         cp.array[0] = cp.buildLocation(2, 3);

@@ -2,7 +2,10 @@ package com.thealgorithms.datastructures.trees;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+* LCA最近公共祖先
+*
+* */
 public class LCA {
 
     private static Scanner scanner = new Scanner(System.in);
@@ -76,12 +79,12 @@ public class LCA {
      * @return Returns a vertex that is LCA of v1 and v2
      */
     private static int getLCA(int v1, int v2, int[] depth, int[] parent) {
-        if (depth[v1] < depth[v2]) {
+        if (depth[v1] < depth[v2]) { // 令v1的深度比v2大
             int temp = v1;
             v1 = v2;
             v2 = temp;
         }
-        while (depth[v1] != depth[v2]) {
+        while (depth[v1] != depth[v2]) { // 使v1和v2深度一样
             v1 = parent[v1];
         }
         if (v1 == v2) {

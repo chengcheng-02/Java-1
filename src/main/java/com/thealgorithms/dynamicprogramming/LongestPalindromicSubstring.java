@@ -1,6 +1,7 @@
 package com.thealgorithms.dynamicprogramming;
 
 /*
+ * 最长回文子串
  * Algorithm explanation https://leetcode.com/problems/longest-palindromic-substring/
  */
 public class LongestPalindromicSubstring {
@@ -50,5 +51,4 @@ public class LongestPalindromicSubstring {
         }
         return input.substring(start, end + 1);
     }
-
 }

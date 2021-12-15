@@ -3,7 +3,9 @@ package com.thealgorithms.dynamicprogramming;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-
+/*
+* 动态规划 自底向上
+* */
 public class MatrixChainMultiplication {
 
     private static Scanner scan = new Scanner(System.in);
@@ -28,12 +30,15 @@ public class MatrixChainMultiplication {
             count++;
         }
         for (Matrix m : mArray) {
-            System.out.format("A(%d)  =  %2d  x  %2d%n", m.count(), m.col(), m.row());
+            System.out.format("A(%d)  =  %2d  x  %2d%n", m.getCount(), m.getRow(), m.getCol());
         }
 
         size = mArray.size();
+//        m存放最优子结构结果
         m = new int[size + 1][size + 1];
+//
         s = new int[size + 1][size + 1];
+//        存放矩阵的列
         p = new int[size + 1];
 
         for (int i = 0; i < size + 1; i++) {
@@ -42,7 +47,7 @@ public class MatrixChainMultiplication {
         }
 
         for (int i = 0; i < p.length; i++) {
-            p[i] = i == 0 ? mArray.get(i).col() : mArray.get(i - 1).row();
+            p[i] = i == 0 ? mArray.get(i).getRow() : mArray.get(i - 1).getCol();
         }
 
         matrixChainOrder();
@@ -116,24 +121,23 @@ public class MatrixChainMultiplication {
 class Matrix {
 
     private int count;
-    private int col;
     private int row;
+    private int col;
 
-    Matrix(int count, int col, int row) {
+    Matrix(int count, int row, int col) {
         this.count = count;
-        this.col = col;
         this.row = row;
+        this.col = col;
     }
-
-    int count() {
+    public int getCount() {
         return count;
     }
 
-    int col() {
+    public int getCol() {
         return col;
     }
 
-    int row() {
+    public int getRow() {
         return row;
     }
 }

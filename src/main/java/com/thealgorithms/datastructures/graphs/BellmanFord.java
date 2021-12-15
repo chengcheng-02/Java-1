@@ -21,8 +21,8 @@ start vertex, end vertex and weights. Vertices should be labelled with a number 
         int w;
 
         /**
-         * @param u Source Vertex
-         * @param v End vertex
+         * @param a Source Vertex
+         * @param b End vertex
          * @param c Weight
          */
         public Edge(int a, int b, int c) {
@@ -33,7 +33,7 @@ start vertex, end vertex and weights. Vertices should be labelled with a number 
     }
 
     /**
-     * @param p[] Parent array which shows updates in edges
+     * @param p  Parent array which shows updates in edges
      * @param i Current vertex under consideration
      */
     void printPath(int p[], int i) {
@@ -112,7 +112,7 @@ start vertex, end vertex and weights. Vertices should be labelled with a number 
     /**
      * @param source Starting vertex
      * @param end Ending vertex
-     * @param Edge Array of edges
+     * @param arr Array of edges
      */
     public void show(
             int source,

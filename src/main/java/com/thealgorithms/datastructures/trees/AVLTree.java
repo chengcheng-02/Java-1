@@ -122,8 +122,9 @@ public class AVLTree {
     }
 
     private Node rotateLeft(Node a) {
-
+//        获取节点的右结点
         Node b = a.right;
+
         b.parent = a.parent;
 
         a.right = b.left;

@@ -75,7 +75,7 @@ public class CheckIfBinaryTreeBalanced {
      * Private helper method to keep track of the depth and balance during
      * recursion. We effectively perform a modified post-order traversal where
      * we are looking at the heights of both children of each node in the tree
-     *
+     * 递归
      * @param node The current node to explore
      * @param depth The current depth of the node
      * @param isBalanced The array of length 1 keeping track of our balance
@@ -104,7 +104,7 @@ public class CheckIfBinaryTreeBalanced {
     }
 
     /**
-     * Iterative is BT balanced implementation
+     * Iterative is BT balanced implementation 非递归
      */
     public boolean isBalancedIterative(BinaryTree binaryTree) {
         // Default that we are balanced and our algo will prove it wrong
@@ -176,12 +176,12 @@ public class CheckIfBinaryTreeBalanced {
                     node = null;
                     // If the right child node of this node has not been visited
                     // and is not null, we need to get that child node on the stack
-                } else {
+                }
+                else {  //栈顶元素的右孩子即不为空，且栈顶元素的的右孩子也不是上一次访问的节点
                     node = node.right;
                 }
             }
         }
-
         // Return whether or not the tree is balanced
         return isBalanced;
     }

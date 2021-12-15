@@ -5,6 +5,11 @@ import java.util.Scanner;
 /**
  * Given a string containing just the characters '(' and ')', find the length of
  * the longest valid (well-formed) parentheses substring.
+ * 给定一个括号序列A，求其最长合法括号子串的长度。
+ *
+ * 考虑一个括号序列合法的充要条件。它含两个条件：
+ * 1、左右括号个数相等；
+ * 2、任意前缀中左括号个数不小于右括号个数。
  *
  * @author Libin Yang (https://github.com/yanglbme)
  * @since 2018/10/5
